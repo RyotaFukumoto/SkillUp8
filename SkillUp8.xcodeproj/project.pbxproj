@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A30E310B20233C1A00D3931C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E310A20233C1A00D3931C /* AppDelegate.swift */; };
+		A30E310D20233C1A00D3931C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E310C20233C1A00D3931C /* ViewController.swift */; };
+		A30E311020233C1A00D3931C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30E310E20233C1A00D3931C /* Main.storyboard */; };
+		A30E311220233C1A00D3931C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30E311120233C1A00D3931C /* Assets.xcassets */; };
+		A30E311520233C1A00D3931C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30E311320233C1A00D3931C /* LaunchScreen.storyboard */; };
+		A30E312020233C1A00D3931C /* SkillUp8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E311F20233C1A00D3931C /* SkillUp8Tests.swift */; };
+		A30E312B20233C1A00D3931C /* SkillUp8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E312A20233C1A00D3931C /* SkillUp8UITests.swift */; };
+		A30E313A20233E9900D3931C /* MessageDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E313920233E9900D3931C /* MessageDto.swift */; };
+		A30E314220233F5000D3931C /* MessageDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E314120233F5000D3931C /* MessageDao.swift */; };
+		A30E314520233FF100D3931C /* RealmDaoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E314420233FF100D3931C /* RealmDaoHelper.swift */; };
+		A388055D20280A85006F13AD /* MassageList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A388055C20280A85006F13AD /* MassageList.storyboard */; };
+		A388055F20280B96006F13AD /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A388055E20280B96006F13AD /* MessageListViewController.swift */; };
+		A388056320284A7D006F13AD /* MessageListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A388056220284A7D006F13AD /* MessageListProvider.swift */; };
+		A3880566202ABEC3006F13AD /* MessageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3880565202ABEC3006F13AD /* MessageListTableViewCell.swift */; };
+		A3880568202AC964006F13AD /* String+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3880567202AC964006F13AD /* String+DateFormat.swift */; };
+		C0F8590A256E93C1DBA96C73 /* Pods_SkillUp8Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D500C253547FE6DCB03620A7 /* Pods_SkillUp8Tests.framework */; };
+		DC3D04231DCAA455D84F00E5 /* Pods_SkillUp8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA44418B798A173557BF9DC2 /* Pods_SkillUp8.framework */; };
+		E3FBD4943CB659ECCB8A1359 /* Pods_SkillUp8UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA87208C13F87D9A0CA968F3 /* Pods_SkillUp8UITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A30E311C20233C1A00D3931C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A30E30FF20233C1A00D3931C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A30E310620233C1A00D3931C;
+			remoteInfo = SkillUp8;
+		};
+		A30E312720233C1A00D3931C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A30E30FF20233C1A00D3931C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A30E310620233C1A00D3931C;
+			remoteInfo = SkillUp8;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AEBA0B521CD093C166F7841 /* Pods-SkillUp8Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillUp8Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkillUp8Tests/Pods-SkillUp8Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		28A6443BBBCCC09D867A384B /* Pods-SkillUp8Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillUp8Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillUp8Tests/Pods-SkillUp8Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4CDF2B38B7BB870326A0832B /* Pods-SkillUp8UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillUp8UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillUp8UITests/Pods-SkillUp8UITests.release.xcconfig"; sourceTree = "<group>"; };
+		8345EE600E43AD799C964FC1 /* Pods-SkillUp8UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillUp8UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkillUp8UITests/Pods-SkillUp8UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F676E8D8FE32E102B558045 /* Pods-SkillUp8.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillUp8.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkillUp8/Pods-SkillUp8.debug.xcconfig"; sourceTree = "<group>"; };
+		A30E310720233C1A00D3931C /* SkillUp8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkillUp8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30E310A20233C1A00D3931C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A30E310C20233C1A00D3931C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A30E310F20233C1A00D3931C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A30E311120233C1A00D3931C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A30E311420233C1A00D3931C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A30E311620233C1A00D3931C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A30E311B20233C1A00D3931C /* SkillUp8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkillUp8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30E311F20233C1A00D3931C /* SkillUp8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillUp8Tests.swift; sourceTree = "<group>"; };
+		A30E312120233C1A00D3931C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A30E312620233C1A00D3931C /* SkillUp8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkillUp8UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30E312A20233C1A00D3931C /* SkillUp8UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillUp8UITests.swift; sourceTree = "<group>"; };
+		A30E312C20233C1A00D3931C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A30E313920233E9900D3931C /* MessageDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDto.swift; sourceTree = "<group>"; };
+		A30E314020233ECE00D3931C /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30E314120233F5000D3931C /* MessageDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDao.swift; sourceTree = "<group>"; };
+		A30E314420233FF100D3931C /* RealmDaoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDaoHelper.swift; sourceTree = "<group>"; };
+		A388055C20280A85006F13AD /* MassageList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MassageList.storyboard; sourceTree = "<group>"; };
+		A388055E20280B96006F13AD /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
+		A388056220284A7D006F13AD /* MessageListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListProvider.swift; sourceTree = "<group>"; };
+		A3880565202ABEC3006F13AD /* MessageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewCell.swift; sourceTree = "<group>"; };
+		A3880567202AC964006F13AD /* String+DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DateFormat.swift"; sourceTree = "<group>"; };
+		CA87208C13F87D9A0CA968F3 /* Pods_SkillUp8UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkillUp8UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D500C253547FE6DCB03620A7 /* Pods_SkillUp8Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkillUp8Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6C40ECE0A4B29E542FEB73F /* Pods-SkillUp8.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillUp8.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillUp8/Pods-SkillUp8.release.xcconfig"; sourceTree = "<group>"; };
+		EA44418B798A173557BF9DC2 /* Pods_SkillUp8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkillUp8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30E310420233C1A00D3931C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC3D04231DCAA455D84F00E5 /* Pods_SkillUp8.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30E311820233C1A00D3931C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0F8590A256E93C1DBA96C73 /* Pods_SkillUp8Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30E312320233C1A00D3931C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FBD4943CB659ECCB8A1359 /* Pods_SkillUp8UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D17B05F0BC402CB3A1EBBD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A30E314020233ECE00D3931C /* RealmSwift.framework */,
+				EA44418B798A173557BF9DC2 /* Pods_SkillUp8.framework */,
+				D500C253547FE6DCB03620A7 /* Pods_SkillUp8Tests.framework */,
+				CA87208C13F87D9A0CA968F3 /* Pods_SkillUp8UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A30E30FE20233C1A00D3931C = {
+			isa = PBXGroup;
+			children = (
+				A30E310920233C1A00D3931C /* SkillUp8 */,
+				A30E311E20233C1A00D3931C /* SkillUp8Tests */,
+				A30E312920233C1A00D3931C /* SkillUp8UITests */,
+				A30E310820233C1A00D3931C /* Products */,
+				B377C985F0D5D23A2BC8D44E /* Pods */,
+				7D17B05F0BC402CB3A1EBBD3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A30E310820233C1A00D3931C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30E310720233C1A00D3931C /* SkillUp8.app */,
+				A30E311B20233C1A00D3931C /* SkillUp8Tests.xctest */,
+				A30E312620233C1A00D3931C /* SkillUp8UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A30E310920233C1A00D3931C /* SkillUp8 */ = {
+			isa = PBXGroup;
+			children = (
+				A388056420284BC2006F13AD /* Views */,
+				A388055B20280A37006F13AD /* Controlelrs */,
+				A30E314320233FD300D3931C /* Helpers */,
+				A30E313820233C6E00D3931C /* Models */,
+				A30E310A20233C1A00D3931C /* AppDelegate.swift */,
+				A30E310C20233C1A00D3931C /* ViewController.swift */,
+				A30E310E20233C1A00D3931C /* Main.storyboard */,
+				A30E311120233C1A00D3931C /* Assets.xcassets */,
+				A30E311320233C1A00D3931C /* LaunchScreen.storyboard */,
+				A30E311620233C1A00D3931C /* Info.plist */,
+			);
+			path = SkillUp8;
+			sourceTree = "<group>";
+		};
+		A30E311E20233C1A00D3931C /* SkillUp8Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A30E311F20233C1A00D3931C /* SkillUp8Tests.swift */,
+				A30E312120233C1A00D3931C /* Info.plist */,
+			);
+			path = SkillUp8Tests;
+			sourceTree = "<group>";
+		};
+		A30E312920233C1A00D3931C /* SkillUp8UITests */ = {
+			isa = PBXGroup;
+			children = (
+				A30E312A20233C1A00D3931C /* SkillUp8UITests.swift */,
+				A30E312C20233C1A00D3931C /* Info.plist */,
+			);
+			path = SkillUp8UITests;
+			sourceTree = "<group>";
+		};
+		A30E313820233C6E00D3931C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3880567202AC964006F13AD /* String+DateFormat.swift */,
+				A30E313920233E9900D3931C /* MessageDto.swift */,
+				A30E314120233F5000D3931C /* MessageDao.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A30E314320233FD300D3931C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A30E314420233FF100D3931C /* RealmDaoHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A388055B20280A37006F13AD /* Controlelrs */ = {
+			isa = PBXGroup;
+			children = (
+				A388055C20280A85006F13AD /* MassageList.storyboard */,
+				A388055E20280B96006F13AD /* MessageListViewController.swift */,
+			);
+			path = Controlelrs;
+			sourceTree = "<group>";
+		};
+		A388056420284BC2006F13AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A388056220284A7D006F13AD /* MessageListProvider.swift */,
+				A3880565202ABEC3006F13AD /* MessageListTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B377C985F0D5D23A2BC8D44E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F676E8D8FE32E102B558045 /* Pods-SkillUp8.debug.xcconfig */,
+				D6C40ECE0A4B29E542FEB73F /* Pods-SkillUp8.release.xcconfig */,
+				1AEBA0B521CD093C166F7841 /* Pods-SkillUp8Tests.debug.xcconfig */,
+				28A6443BBBCCC09D867A384B /* Pods-SkillUp8Tests.release.xcconfig */,
+				8345EE600E43AD799C964FC1 /* Pods-SkillUp8UITests.debug.xcconfig */,
+				4CDF2B38B7BB870326A0832B /* Pods-SkillUp8UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A30E310620233C1A00D3931C /* SkillUp8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A30E312F20233C1A00D3931C /* Build configuration list for PBXNativeTarget "SkillUp8" */;
+			buildPhases = (
+				66B5A41673C91B6B433180A2 /* [CP] Check Pods Manifest.lock */,
+				A30E310320233C1A00D3931C /* Sources */,
+				A30E310420233C1A00D3931C /* Frameworks */,
+				A30E310520233C1A00D3931C /* Resources */,
+				4040ABE3B1705FB8A54530C3 /* [CP] Embed Pods Frameworks */,
+				3DAC3F1C42BBF887CBC3EB0D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkillUp8;
+			productName = SkillUp8;
+			productReference = A30E310720233C1A00D3931C /* SkillUp8.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A30E311A20233C1A00D3931C /* SkillUp8Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A30E313220233C1A00D3931C /* Build configuration list for PBXNativeTarget "SkillUp8Tests" */;
+			buildPhases = (
+				C2DEB80D86836F8100D7B94F /* [CP] Check Pods Manifest.lock */,
+				A30E311720233C1A00D3931C /* Sources */,
+				A30E311820233C1A00D3931C /* Frameworks */,
+				A30E311920233C1A00D3931C /* Resources */,
+				B1DBD8DD2CAA56E7E08F664F /* [CP] Embed Pods Frameworks */,
+				2129FA32946EE668BA36D75E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A30E311D20233C1A00D3931C /* PBXTargetDependency */,
+			);
+			name = SkillUp8Tests;
+			productName = SkillUp8Tests;
+			productReference = A30E311B20233C1A00D3931C /* SkillUp8Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A30E312520233C1A00D3931C /* SkillUp8UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A30E313520233C1A00D3931C /* Build configuration list for PBXNativeTarget "SkillUp8UITests" */;
+			buildPhases = (
+				D4B2A7A9AECE9B0C15ECFECF /* [CP] Check Pods Manifest.lock */,
+				A30E312220233C1A00D3931C /* Sources */,
+				A30E312320233C1A00D3931C /* Frameworks */,
+				A30E312420233C1A00D3931C /* Resources */,
+				9570E8D764190C8F52DE36CD /* [CP] Embed Pods Frameworks */,
+				85A003B9650F747F53AB504F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A30E312820233C1A00D3931C /* PBXTargetDependency */,
+			);
+			name = SkillUp8UITests;
+			productName = SkillUp8UITests;
+			productReference = A30E312620233C1A00D3931C /* SkillUp8UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A30E30FF20233C1A00D3931C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = ryota;
+				TargetAttributes = {
+					A30E310620233C1A00D3931C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A30E311A20233C1A00D3931C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A30E310620233C1A00D3931C;
+					};
+					A30E312520233C1A00D3931C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A30E310620233C1A00D3931C;
+					};
+				};
+			};
+			buildConfigurationList = A30E310220233C1A00D3931C /* Build configuration list for PBXProject "SkillUp8" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A30E30FE20233C1A00D3931C;
+			productRefGroup = A30E310820233C1A00D3931C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A30E310620233C1A00D3931C /* SkillUp8 */,
+				A30E311A20233C1A00D3931C /* SkillUp8Tests */,
+				A30E312520233C1A00D3931C /* SkillUp8UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A30E310520233C1A00D3931C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30E311520233C1A00D3931C /* LaunchScreen.storyboard in Resources */,
+				A30E311220233C1A00D3931C /* Assets.xcassets in Resources */,
+				A388055D20280A85006F13AD /* MassageList.storyboard in Resources */,
+				A30E311020233C1A00D3931C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30E311920233C1A00D3931C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30E312420233C1A00D3931C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2129FA32946EE668BA36D75E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkillUp8Tests/Pods-SkillUp8Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DAC3F1C42BBF887CBC3EB0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkillUp8/Pods-SkillUp8-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4040ABE3B1705FB8A54530C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SkillUp8/Pods-SkillUp8-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkillUp8/Pods-SkillUp8-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66B5A41673C91B6B433180A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkillUp8-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85A003B9650F747F53AB504F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkillUp8UITests/Pods-SkillUp8UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9570E8D764190C8F52DE36CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkillUp8UITests/Pods-SkillUp8UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1DBD8DD2CAA56E7E08F664F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkillUp8Tests/Pods-SkillUp8Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2DEB80D86836F8100D7B94F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkillUp8Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4B2A7A9AECE9B0C15ECFECF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkillUp8UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30E310320233C1A00D3931C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A388056320284A7D006F13AD /* MessageListProvider.swift in Sources */,
+				A3880566202ABEC3006F13AD /* MessageListTableViewCell.swift in Sources */,
+				A30E314220233F5000D3931C /* MessageDao.swift in Sources */,
+				A30E310D20233C1A00D3931C /* ViewController.swift in Sources */,
+				A30E310B20233C1A00D3931C /* AppDelegate.swift in Sources */,
+				A30E313A20233E9900D3931C /* MessageDto.swift in Sources */,
+				A3880568202AC964006F13AD /* String+DateFormat.swift in Sources */,
+				A388055F20280B96006F13AD /* MessageListViewController.swift in Sources */,
+				A30E314520233FF100D3931C /* RealmDaoHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30E311720233C1A00D3931C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30E312020233C1A00D3931C /* SkillUp8Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30E312220233C1A00D3931C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30E312B20233C1A00D3931C /* SkillUp8UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A30E311D20233C1A00D3931C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A30E310620233C1A00D3931C /* SkillUp8 */;
+			targetProxy = A30E311C20233C1A00D3931C /* PBXContainerItemProxy */;
+		};
+		A30E312820233C1A00D3931C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A30E310620233C1A00D3931C /* SkillUp8 */;
+			targetProxy = A30E312720233C1A00D3931C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A30E310E20233C1A00D3931C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A30E310F20233C1A00D3931C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A30E311320233C1A00D3931C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A30E311420233C1A00D3931C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A30E312D20233C1A00D3931C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A30E312E20233C1A00D3931C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A30E313020233C1A00D3931C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F676E8D8FE32E102B558045 /* Pods-SkillUp8.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V89BB5PY3;
+				INFOPLIST_FILE = SkillUp8/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ryotaF.SkillUp8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A30E313120233C1A00D3931C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6C40ECE0A4B29E542FEB73F /* Pods-SkillUp8.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V89BB5PY3;
+				INFOPLIST_FILE = SkillUp8/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ryotaF.SkillUp8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A30E313320233C1A00D3931C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AEBA0B521CD093C166F7841 /* Pods-SkillUp8Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V89BB5PY3;
+				INFOPLIST_FILE = SkillUp8Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ryotaF.SkillUp8Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkillUp8.app/SkillUp8";
+			};
+			name = Debug;
+		};
+		A30E313420233C1A00D3931C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28A6443BBBCCC09D867A384B /* Pods-SkillUp8Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V89BB5PY3;
+				INFOPLIST_FILE = SkillUp8Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ryotaF.SkillUp8Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkillUp8.app/SkillUp8";
+			};
+			name = Release;
+		};
+		A30E313620233C1A00D3931C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8345EE600E43AD799C964FC1 /* Pods-SkillUp8UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V89BB5PY3;
+				INFOPLIST_FILE = SkillUp8UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ryotaF.SkillUp8UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SkillUp8;
+			};
+			name = Debug;
+		};
+		A30E313720233C1A00D3931C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CDF2B38B7BB870326A0832B /* Pods-SkillUp8UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V89BB5PY3;
+				INFOPLIST_FILE = SkillUp8UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ryotaF.SkillUp8UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SkillUp8;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A30E310220233C1A00D3931C /* Build configuration list for PBXProject "SkillUp8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30E312D20233C1A00D3931C /* Debug */,
+				A30E312E20233C1A00D3931C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A30E312F20233C1A00D3931C /* Build configuration list for PBXNativeTarget "SkillUp8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30E313020233C1A00D3931C /* Debug */,
+				A30E313120233C1A00D3931C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A30E313220233C1A00D3931C /* Build configuration list for PBXNativeTarget "SkillUp8Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30E313320233C1A00D3931C /* Debug */,
+				A30E313420233C1A00D3931C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A30E313520233C1A00D3931C /* Build configuration list for PBXNativeTarget "SkillUp8UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30E313620233C1A00D3931C /* Debug */,
+				A30E313720233C1A00D3931C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A30E30FF20233C1A00D3931C /* Project object */;
+}
