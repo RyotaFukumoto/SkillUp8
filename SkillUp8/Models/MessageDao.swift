@@ -22,6 +22,7 @@ class MessageDao {
         message.date = Date()
         
         dao.add(object: message)
+        
     }
     static func fina(postDate: String) -> [MessageDto] {
         
