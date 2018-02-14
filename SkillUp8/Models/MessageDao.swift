@@ -12,18 +12,19 @@ class MessageDao {
     static let dao = RealmDaoHelper<MessageDto>()
     
     ///    メッセージ追加
-    static func addMessage(text: String) {
-        let message = MessageDto()
+    static func addMessage(message: String) {
+        let obje = MessageDto()
         guard let newID = dao.newId() else {
             return
         }
-        message.messageID = newID
-        message.text = text
-        message.date = Date()
+        obje.messageID = newID
+        obje.message = message
+        obje.date = Date()
         
-        dao.add(object: message)
+        dao.add(object: obje)
         
     }
+    
     static func fina(postDate: String) -> [MessageDto] {
         
         let fromDate = "\(postDate) 00:00:00".toDateStyleMedium(dateFormat: "yyyy-MM-dd HH:mm:ss")
@@ -52,7 +53,7 @@ class MessageDao {
         return results
     }
     
-    ///メッセージ一覧取得　降順
+    ///メッセージ一取得　降順
     static func findAll() -> [MessageDto]{
         
         return dao.findAll().sorted(byKeyPath: "date", ascending: true).map{

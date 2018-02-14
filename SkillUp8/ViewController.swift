@@ -12,8 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        MessageDao.addMessage(text: "test")
-        MessageDao.addMessage(text: "test2")
+
         
         print(MessageDao.findAll())
         print(MessageDao.groupByPostDate())

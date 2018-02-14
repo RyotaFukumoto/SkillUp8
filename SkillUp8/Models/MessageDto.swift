@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 class MessageDto: Object {
     @objc dynamic var messageID = 0
-    @objc dynamic var text = ""
+    @objc dynamic var message = ""
     @objc dynamic var date = Date()
     
     override static func primaryKey() -> String? {

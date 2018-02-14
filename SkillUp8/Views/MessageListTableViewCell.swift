@@ -14,6 +14,7 @@ class MessageListTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        textV.layer.cornerRadius = 5
         // Initialization code
     }
 

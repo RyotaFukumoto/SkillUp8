@@ -16,20 +16,29 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
 
     @IBOutlet weak var sendBTN: UIButton!
     @IBOutlet weak var inputVIew: UITextView!
+    
     @IBAction func sendBTN(_ sender: UIButton) {
-        MessageDao.addMessage(text: inputVIew.text)
+        MessageDao.addMessage(message: inputVIew.text)
         reloadMessages()
         inputVIew.text = ""
         sendBTN.isEnabled = false
         inputVIew.resignFirstResponder()
+        
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = dataSource
-
+       
         inputVIew.delegate = self
+        
         sendBTN.isEnabled = false
         reloadMessages()
+        tableView.separatorStyle = .none
+
+        
+      
         // Do any additional setup after loading the view.
     }
 
@@ -37,28 +46,51 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func reloadMessages() {
-        
-        let groups = MessageDao.groupByPostDate()
-        
-        let messages = groups.map {
-            MessageDao.fina(postDate: $0)
-        }
-        dataSource.set(messageList: messages, groupList: groups)
-       tableView.reloadData()
-        
-    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        self.configureObserver()
+        configureObserver()
+        
         
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         
         super.viewWillDisappear(animated)
-        self.removeObserver() // Notificationを画面が消えるときに削除
+        self.removeObserver()
+        
+    }
+    
+    //セクション毎にセクションラベルと、値のセット
+    func reloadMessages() {
+        
+        let groups = MessageDao.groupByPostDate()
+        let messages = groups.map {
+            MessageDao.fina(postDate: $0)
+        }
+        print(MessageDao.findAll())
+        dataSource.set(messageList: messages, groupList: groups)
+        tableView.reloadData()
+        tableViewScrollToBottom(animated: false)
+        
+    }
+    
+    //最新のメッセージに移動
+    func tableViewScrollToBottom(animated: Bool) {
+
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        
+            let numberOfSections = self.tableView.numberOfSections
+            let numberOfRows = self.tableView.numberOfRows(inSection: numberOfSections-1)
+            
+            if numberOfRows > 0 {
+                let indexPath = IndexPath(row: numberOfRows - 1 , section: numberOfSections - 1)
+                self.tableView.scrollToRow(at: indexPath as IndexPath, at: UITableViewScrollPosition.bottom, animated: animated)
+            }
+            
+        }
     }
     
     // Notificationを設定
@@ -79,25 +111,24 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
     // キーボードが現れた時に、画面全体をずらす。
     @objc func keyboardWillShow(notification: Notification?) {
         
-        let rect = (notification?.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
-        let duration: TimeInterval? = notification?.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
-        UIView.animate(withDuration: duration!, animations: { () in
-            let transform = CGAffineTransform(translationX: 0, y: -(rect?.size.height)!)
+        let rect = (notification?.userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let duration:TimeInterval = notification?.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! Double
+        UIView.animate(withDuration: duration, animations: {
+            let transform = CGAffineTransform(translationX: 0, y: -rect.size.height)
             self.view.transform = transform
-            
-        })
+        },completion:nil)
     }
     
     // キーボードが消えたときに、画面を戻す
     @objc func keyboardWillHide(notification: Notification?) {
         
-        let duration: TimeInterval? = notification?.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Double
-        UIView.animate(withDuration: duration!, animations: { () in
-            
+        let duration = (notification?.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! Double)
+        UIView.animate(withDuration: duration, animations:{
             self.view.transform = CGAffineTransform.identity
-        })
+        },
+                                   completion:nil)
     }
-    
+    //入力フィールドのサイズ変更
     func textViewDidChange(_ textView: UITextView) {
         if inputVIew.text.isEmpty{
             return
