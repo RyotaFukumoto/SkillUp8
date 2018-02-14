@@ -11,13 +11,11 @@ import Foundation
 class MessageDao {
     static let dao = RealmDaoHelper<MessageDto>()
     
-    ///    メッセージ追加
+    //メッセージ追加
     static func addMessage(message: String) {
         let obje = MessageDto()
-        guard let newID = dao.newId() else {
-            return
-        }
-        obje.messageID = newID
+        let newID = dao.newId()
+        obje.messageID = newID!
         obje.message = message
         obje.date = Date()
         
@@ -26,9 +24,15 @@ class MessageDao {
     }
     
     static func fina(postDate: String) -> [MessageDto] {
+
+        let format = DateFormatter()
+        format.locale = Locale(identifier: "ja_JP")
+        format.dateStyle = .medium
+        format.timeStyle = .medium
+
+        let fromDate = format.date(from: "\(postDate) 00:00:00")!
+        let toDate = format.date(from: "\(postDate) 23:59:59")!
         
-        let fromDate = "\(postDate) 00:00:00".toDateStyleMedium(dateFormat: "yyyy-MM-dd HH:mm:ss")
-        let toDate = "\(postDate) 23:59:59".toDateStyleMedium(dateFormat: "yyyy-MM-dd HH:mm:ss")
         
         return dao.findAll()
             .filter("date >= %@ AND date <= %@", fromDate,toDate)
@@ -40,25 +44,26 @@ class MessageDao {
         var results = [String]()
         
         for message in messages {
-            guard let postDate = message.date
-                .description.components(separatedBy: " ").first else {
-                    continue
-            }
+            let postDate = message.date.description.components(separatedBy: " ").first
             
             if (results.filter { $0 == postDate }.count > 0) {
                 continue
             }
-            results.append(postDate)
+            results.append(postDate!)
         }
         return results
     }
     
-    ///メッセージ一取得　降順
+    //メッセージ一取得　降順
     static func findAll() -> [MessageDto]{
         
         return dao.findAll().sorted(byKeyPath: "date", ascending: true).map{
             MessageDto.init(value: $0)
         }
+    }
+    // メッセージをすべて削除する
+    static func deleteAll() {
+        dao.deleteAll()
     }
    
 }

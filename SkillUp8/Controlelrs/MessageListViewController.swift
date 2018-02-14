@@ -19,10 +19,8 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
     
     @IBAction func sendBTN(_ sender: UIButton) {
         MessageDao.addMessage(message: inputVIew.text)
-        reloadMessages()
-        inputVIew.text = ""
-        sendBTN.isEnabled = false
         inputVIew.resignFirstResponder()
+        setUp()
         
     }
     
@@ -32,18 +30,14 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
        
         inputVIew.delegate = self
         
-        sendBTN.isEnabled = false
-        reloadMessages()
+        setUp()
         tableView.separatorStyle = .none
 
-        
-      
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +55,12 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
         
     }
     
+    func setUp(){
+        inputVIew.text = ""
+        sendBTN.isEnabled = false
+        reloadMessages()
+    }
+    
     //セクション毎にセクションラベルと、値のセット
     func reloadMessages() {
         
@@ -68,7 +68,7 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
         let messages = groups.map {
             MessageDao.fina(postDate: $0)
         }
-        print(MessageDao.findAll())
+        print(messages.first)
         dataSource.set(messageList: messages, groupList: groups)
         tableView.reloadData()
         tableViewScrollToBottom(animated: false)
@@ -81,11 +81,10 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
         
-            let numberOfSections = self.tableView.numberOfSections
-            let numberOfRows = self.tableView.numberOfRows(inSection: numberOfSections-1)
-            
-            if numberOfRows > 0 {
-                let indexPath = IndexPath(row: numberOfRows - 1 , section: numberOfSections - 1)
+            let sections = self.tableView.numberOfSections
+            if sections > 0 {
+                let rows = self.tableView.numberOfRows(inSection: sections-1)
+                let indexPath = IndexPath(row: rows - 1 , section: sections - 1)
                 self.tableView.scrollToRow(at: indexPath as IndexPath, at: UITableViewScrollPosition.bottom, animated: animated)
             }
             
@@ -139,14 +138,6 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
             inputVIew.frame.size.height = size.height
         }
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

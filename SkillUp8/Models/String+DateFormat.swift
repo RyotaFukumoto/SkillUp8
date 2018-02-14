@@ -12,13 +12,13 @@ extension String {
 
     func toDateStyleMedium(dateFormat: String) -> Date  {
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale!
-        dateFormatter.timeStyle = .medium
-        dateFormatter.dateStyle = .medium
-        dateFormatter.dateFormat = dateFormat
+        let format = DateFormatter()
+        format.locale = NSLocale(localeIdentifier: "ja_JP") as Locale!
+        format.timeStyle = .medium
+        format.dateStyle = .medium
+        format.dateFormat = dateFormat
 
-        return dateFormatter.date(from: self)!
+        return format.date(from: self)!
     }
     
 }

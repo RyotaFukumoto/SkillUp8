@@ -21,7 +21,6 @@
 		A388055F20280B96006F13AD /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A388055E20280B96006F13AD /* MessageListViewController.swift */; };
 		A388056320284A7D006F13AD /* MessageListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A388056220284A7D006F13AD /* MessageListProvider.swift */; };
 		A3880566202ABEC3006F13AD /* MessageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3880565202ABEC3006F13AD /* MessageListTableViewCell.swift */; };
-		A3880568202AC964006F13AD /* String+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3880567202AC964006F13AD /* String+DateFormat.swift */; };
 		C0F8590A256E93C1DBA96C73 /* Pods_SkillUp8Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D500C253547FE6DCB03620A7 /* Pods_SkillUp8Tests.framework */; };
 		DC3D04231DCAA455D84F00E5 /* Pods_SkillUp8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA44418B798A173557BF9DC2 /* Pods_SkillUp8.framework */; };
 		E3FBD4943CB659ECCB8A1359 /* Pods_SkillUp8UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA87208C13F87D9A0CA968F3 /* Pods_SkillUp8UITests.framework */; };
@@ -71,7 +70,6 @@
 		A388055E20280B96006F13AD /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
 		A388056220284A7D006F13AD /* MessageListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListProvider.swift; sourceTree = "<group>"; };
 		A3880565202ABEC3006F13AD /* MessageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewCell.swift; sourceTree = "<group>"; };
-		A3880567202AC964006F13AD /* String+DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DateFormat.swift"; sourceTree = "<group>"; };
 		CA87208C13F87D9A0CA968F3 /* Pods_SkillUp8UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkillUp8UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D500C253547FE6DCB03620A7 /* Pods_SkillUp8Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkillUp8Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C40ECE0A4B29E542FEB73F /* Pods-SkillUp8.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillUp8.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillUp8/Pods-SkillUp8.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 		A30E313820233C6E00D3931C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A3880567202AC964006F13AD /* String+DateFormat.swift */,
 				A30E313920233E9900D3931C /* MessageDto.swift */,
 				A30E314120233F5000D3931C /* MessageDao.swift */,
 			);
@@ -525,7 +522,6 @@
 				A30E310D20233C1A00D3931C /* ViewController.swift in Sources */,
 				A30E310B20233C1A00D3931C /* AppDelegate.swift in Sources */,
 				A30E313A20233E9900D3931C /* MessageDto.swift in Sources */,
-				A3880568202AC964006F13AD /* String+DateFormat.swift in Sources */,
 				A388055F20280B96006F13AD /* MessageListViewController.swift in Sources */,
 				A30E314520233FF100D3931C /* RealmDaoHelper.swift in Sources */,
 			);

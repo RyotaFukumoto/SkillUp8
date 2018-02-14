@@ -13,7 +13,7 @@ class MessageListProvider: NSObject {
     var groupList = [String]()
     //セクションのラベル、セクションの中身のセット
     func set(messageList: [[MessageDto]], groupList: [String]) {
-        print(messageList)
+
 
         self.messageList = messageList
         self.groupList = groupList
@@ -21,15 +21,17 @@ class MessageListProvider: NSObject {
 }
 extension MessageListProvider:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(messageList[section].count)
+
         return messageList[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as? MessageListTableViewCell
+        
         let dateFormater = DateFormatter()
         dateFormater.locale = Locale(identifier: "ja_JP")
         dateFormater.dateFormat = "HH:mm"
+        
         let date = dateFormater.string(from: messageList[indexPath.section][indexPath.row].date)
         cell?.textV.text = messageList[indexPath.section][indexPath.row].message
         cell?.label.text = date
@@ -39,7 +41,7 @@ extension MessageListProvider:UITableViewDataSource{
         return cell!
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        print(groupList)
+
         return groupList.count
     }
     func tableView(_ tableView: UITableView,

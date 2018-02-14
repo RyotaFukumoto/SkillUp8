@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Message List View Controller-->
+        <!--メッセージ-->
         <scene sceneID="e0H-2z-xGp">
             <objects>
                 <viewController id="gU8-ON-PAj" customClass="MessageListViewController" customModule="SkillUp8" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zlJ-wM-Vcs"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h3E-Kw-J50"/>
+                    <navigationItem key="navigationItem" title="メッセージ" id="h3E-Kw-J50"/>
                     <connections>
                         <outlet property="inputVIew" destination="vig-Lu-fl9" id="vcL-mI-R1T"/>
                         <outlet property="sendBTN" destination="4vj-jB-NOI" id="ekU-PT-ft7"/>
