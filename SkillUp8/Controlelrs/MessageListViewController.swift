@@ -26,7 +26,6 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = dataSource
