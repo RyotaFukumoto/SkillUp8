@@ -68,7 +68,7 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
         let messages = groups.map {
             MessageDao.fina(postDate: $0)
         }
-        print(messages.first)
+        
         dataSource.set(messageList: messages, groupList: groups)
         tableView.reloadData()
         tableViewScrollToBottom(animated: false)
