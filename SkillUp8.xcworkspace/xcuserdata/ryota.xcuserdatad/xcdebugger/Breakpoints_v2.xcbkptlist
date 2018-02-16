@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkillUp8/Controlelrs/MessageListViewController.swift"
+            timestampString = "540469445.686309"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "reloadMessages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkillUp8.MessageListViewController.reloadMessages() -&gt; ()"
+                  moduleName = "SkillUp8"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryota/Documents/%E8%87%AA%E5%B7%B1%E5%AD%A6%E7%BF%92/%E4%BA%88%E7%BF%92/SkillUp8/SkillUp8/Controlelrs/MessageListViewController.swift"
+                  timestampString = "540469445.828373"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; Swift.Array&lt;SkillUp8.MessageDto&gt; in SkillUp8.MessageListViewController.reloadMessages() -&gt; ()"
+                  moduleName = "SkillUp8"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryota/Documents/%E8%87%AA%E5%B7%B1%E5%AD%A6%E7%BF%92/%E4%BA%88%E7%BF%92/SkillUp8/SkillUp8/Controlelrs/MessageListViewController.swift"
+                  timestampString = "540469445.852809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkillUp8/Controlelrs/MessageListViewController.swift"
+            timestampString = "540469445.686878"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "reloadMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

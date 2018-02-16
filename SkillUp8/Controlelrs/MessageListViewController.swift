@@ -65,10 +65,12 @@ class MessageListViewController: UIViewController,UITextViewDelegate {
     func reloadMessages() {
         
         let groups = MessageDao.groupByPostDate()
+        print(groups)
+        
         let messages = groups.map {
             MessageDao.fina(postDate: $0)
         }
-        
+        print(messages)
         dataSource.set(messageList: messages, groupList: groups)
         tableView.reloadData()
         tableViewScrollToBottom(animated: false)
